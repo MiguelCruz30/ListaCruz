@@ -1,0 +1,21 @@
+.mayorDeEdad{
+    color:red
+}
+
+.menorDeEdad{
+    color:blue
+}
+
+.block{
+    border: 1px solid black;
+    background-color: lightgreen;
+    font-size: large;
+    text-align: center;
+}
+
+.block2{
+    border: 1px solid black;
+    background-color:red;
+    font-size: large;
+    text-align: center;
+}

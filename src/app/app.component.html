@@ -1,0 +1,34 @@
+<!--<h2>Ejemplo de interpolacion</h2>
+<h3>{{value}}</h3>
+<p>Edad: {{edad}}</p>
+<p [ngClass]="edad<18 ? 'mayorDeEdad' : 'menorDeEdad'">
+  Si soy mayor de edad tendré color rojo, sino azul</p>
+
+  <p class="block" appRoundBlock>Directiva personalizada</p>-->
+  <!--<div>
+    <p *ngFor="let estudiante of estudiantes">
+      {{estudiante.nombre}} - {{estudiante.nota1 + estudiante.nota2}} - {{estudiante.birthday}} - {{estudiante.curso}} </p>
+  </div>-->
+  <h2>Estudiantes
+    <p>Informacion actualizada al {{date | date: 'dd MMMM YY'}}</p>
+  </h2>
+  <div *ngFor=" let estudiante of estudiantes">
+    <h4>
+      {{estudiante.nombre}} del curso {{estudiante.curso}}
+    </h4>
+</div>
+<button (click)="verMas()">masInfo</button>
+<div *ngIf="mostrarDatos">
+  <h2>Los estudiantes que pasaron:</h2>
+  <div *ngFor="let estudiante of estudiantes">
+    <h4 class="block" appRoundBlock *ngIf="promociona(estudiante)">
+      {{estudiante.nombre}} aprobó en su curso de {{estudiante.curso}}
+    </h4>
+  </div>
+  <h2>Los estudiantes que deben recuperar:</h2>
+  <div *ngFor="let estudiante of estudiantes">
+    <h4 class="block2" appRoundBlock *ngIf="!promociona(estudiante)">
+      {{estudiante.nombre}} - curso de {{estudiante.curso}}
+    </h4>
+  </div>
+</div>
